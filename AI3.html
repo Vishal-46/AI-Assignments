@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assignment</title>
+    <link rel="icon" href="SOLLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="AI3.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Forward and Backward Chaining in Artificial Intelligence</h1>
+            <p>Assignment Unit-2 (<strong>Solidarity</strong>)</p>
+        </div>
+    </header>
+    
+    <div class="content">
+        <section>
+            <div class="section-heading">
+                <h2 class="fade-in">Introduction</h2>
+            </div>
+            <div class="description-box">
+                <p>Inference techniques like forward and backward chaining play a crucial role in Artificial Intelligence, especially in expert systems. These methods allow AI to draw logical conclusions from a set of rules and facts, helping machines to think and make decisions like humans. Forward chaining uses available data to progress toward a conclusion, while backward chaining starts with a goal and works backward to verify if the known facts support it. Understanding these inference techniques helps us create smarter, rule-based systems capable of solving complex problems in various fields like diagnostics, decision-making, and problem-solving.</p>
+            </div>
+        </section>
+        <section>
+            <div class="section-heading">
+                <h2 class="highlight-text">Forward Chaining</h2>
+            </div>
+            <div class="description-box">
+                <p>Forward chaining is a reasoning technique used in rule-based systems and expert systems. It starts with a set of known facts and applies inference rules to derive new facts, progressing step by step towards a specific goal. This technique is data-driven, meaning it uses available information to explore all possible outcomes based on the rules provided. Forward chaining is particularly effective in environments where all facts are available, and the goal is to discover all possible conclusions.     <br>                     In a forward chaining system, each time a fact is established, it triggers relevant rules in the knowledge base. The process continues until no more new facts can be derived or until the desired goal is reached. This method is widely used in systems like automated planning, expert diagnostic systems, and decision-making tools.</p>
+            </div>
+
+            <h3>Flowchart: Forward Chaining</h3>
+            <div class="flowchart">
+                <div class="box start">Start</div>
+                <div class="arrow">↓</div>
+                <div class="box check">Check Known Facts</div>
+                <div class="arrow">↓</div>
+                <div class="box apply">Apply Rules</div>
+                <div class="arrow">↓</div>
+                <div class="box new-fact">New Fact Derived?</div>
+                <div class="arrow">↓</div>
+                <div class="box goal">Goal Reached?</div>
+                <div class="arrow">↓</div>
+                <div class="box end">End</div>
+            </div>
+            
+            <div class="example-box">
+                <h3>Detailed Example of Forward Chaining</h3>
+                <p><strong>Scenario:</strong> We want to determine if an animal is a bird.</p>
+                <p><strong>Rules and Facts:</strong></p>
+                <ul class="rules">
+                    <li><strong>Rule 1:</strong> IF the animal has feathers, THEN it is a bird.</li>
+                    <li><strong>Rule 2:</strong> IF the animal can fly, THEN it might be a bird.</li>
+                    <li><strong>Rule 3:</strong> IF the animal has feathers AND can fly, THEN it is confirmed to be a bird.</li>
+                </ul>
+
+                <h4 class="steps-title">Step-by-Step Explanation</h4>
+                <p><strong>Step 1:</strong> We know the animal has feathers, so applying <strong>Rule 1</strong>, we infer it might be a bird.</p>
+                <p><strong>Step 2:</strong> The animal can fly, so <strong>Rule 2</strong> strengthens the possibility that it is a bird.</p>
+                <p><strong>Step 3:</strong> Since both facts (feathers and flying) satisfy <strong>Rule 3</strong>, we conclude the animal is confirmed to be a bird.</p>
+            </div>
+
+            
+        </section>
+        <section>
+            <div class="section-heading">
+                <h2 class="highlight-text-alt">Backward Chaining</h2>
+            </div>
+            <div class="description-box-alt">
+                <p>Backward chaining is a goal-driven reasoning technique commonly employed in artificial intelligence and logic programming. This method starts with a specific goal or hypothesis and works backward to determine whether the known facts support that goal. In contrast to forward chaining, which moves from known facts to conclusions, backward chaining begins with the conclusion and searches for supporting evidence in the form of rules and facts.<br>The process involves checking if the goal can be proven true by identifying relevant rules that lead to it. If the necessary conditions outlined in the rules are met, the system can confirm the goal. If not, the system will further explore the prerequisites, repeating this process until either the goal is substantiated or it becomes clear that the goal cannot be reached. Backward chaining is particularly useful in diagnostic applications, such as troubleshooting, where the goal is to determine the cause of a problem based on known symptoms.</p>
+            </div>
+
+            <h3>Flowchart: Backward Chaining</h3>
+            <div class="flowchart">
+                <div class="box start">Start</div>
+                <div class="arrow">↓</div>
+                <div class="box goal-check">Is Goal True?</div>
+                <div class="arrow">↓</div>
+                <div class="box find-rule">Find Relevant Rules</div>
+                <div class="arrow">↓</div>
+                <div class="box conditions">Check Conditions</div>
+                <div class="arrow">↓</div>
+                <div class="box verify">Verify Facts</div>
+                <div class="arrow">↓</div>
+                <div class="box end">End</div>
+            </div>
+            <div class="example-box-alt">
+                <h3>Detailed Example of Backward Chaining</h3>
+                <p><strong>Scenario:</strong> We want to determine whether a patient should be hospitalized based on their condition.</p>
+                <p><strong>Rules and Facts:</strong></p>
+                <ul class="rules-alt">
+                    <li><strong>Rule 1:</strong> IF the patient has a high heart rate AND difficulty breathing, THEN they are in critical condition.</li>
+                    <li><strong>Rule 2:</strong> IF the patient is in critical condition, THEN they should be hospitalized.</li>
+                </ul>
+
+                <h4 class="steps-title-alt">Step-by-Step Explanation</h4>
+                <p><strong>Step 1:</strong> The goal is to check if the patient should be hospitalized. We start backward from <strong>Rule 2</strong>.</p>
+                <p><strong>Step 2:</strong> To satisfy <strong>Rule 2</strong>, we verify if the patient is in critical condition, as stated by <strong>Rule 1</strong>.</p>
+                <p><strong>Step 3:</strong> Since the patient has a high heart rate and difficulty breathing, we conclude they are in critical condition, so they should be hospitalized.</p>
+            </div>
+
+            </section>
+        <section>
+            <div class="comparison-section">
+                <h2 class="fade-in">Comparison of Forward and Backward Chaining</h2>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>Forward Chaining</th>
+                            <th>Backward Chaining</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Approach</td>
+                            <td>Data-driven</td>
+                            <td>Goal-driven</td>
+                        </tr>
+                        <tr>
+                            <td>Starting Point</td>
+                            <td>Known Facts</td>
+                            <td>Known Goal</td>
+                        </tr>
+                        <tr>
+                            <td>Efficiency</td>
+                            <td>Works well with large datasets</td>
+                            <td>Efficient when the goal is clear</td>
+                        </tr>
+                        <tr>
+                            <td>Use Case</td>
+                            <td>Fact discovery</td>
+                            <td>Diagnostic reasoning</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Solidarity</p>
+    </footer>
+</body>
+</html>

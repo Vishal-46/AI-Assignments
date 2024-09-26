@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #5D8AA8;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.header-content p {
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+.content {
+    margin: 30px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.6rem;
+    color: #333;
+}
+
+h4 {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.section-heading {
+    border-left: 8px solid #5D8AA8;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.section-heading .fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.highlight-text {
+    color: #228B22;
+    background-color: #e6ffe6;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.highlight-text-alt {
+    color: #A52A2A;
+    background-color: #ffe6e6;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.description-box, .description-box-alt {
+    background-color: #f2f2f2;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.example-box, .example-box-alt {
+    background-color: #ffffff;
+    padding: 15px;
+    border-left: 5px solid #5D8AA8;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+.rules, .rules-alt {
+    margin-left: 20px;
+    list-style-type: square;
+}
+
+.steps-title, .steps-title-alt {
+    font-size: 1.4rem;
+    color: #555;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.comparison-table th, .comparison-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.comparison-table th {
+    background-color: #5D8AA8;
+    color: white;
+}
+
+.flowchart {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #5D8AA8;
+    color: white;
+    margin-top: 30px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.flowchart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.box {
+    background-color: #ffffff;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    position: relative;
+}
+
+.arrow {
+    font-size: 24px;
+    color: #4CAF50;
+}
